@@ -1,0 +1,193 @@
+
+<HTML>
+
+<HEAD>
+<LINK REL="stylesheet" HREF="./arkusz.css" TYPE="text/css">
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=windows-1250">
+
+<SCRIPT LANGUAGE="JavaScript">
+elementy = new Array("<INPUT TYPE='Button' ",
+"<INPUT TYPE='Checkbox' ",
+"<SELECT ",
+"<INPUT TYPE='Text' ",
+"<TEXTAREA ");
+function wypisz(x)
+{var przyrostek="";
+with(document.Form9)
+{if (Check1.checked) przyrostek='NAME=" "';
+if(Check2.checked) przyrostek+=' VALUE=" "';
+textarea8.value+=(elementy[x]+przyrostek+">\n");}}
+function fonty()
+{var przyrostek="";
+with(document.Form9)
+{if(Check3.checked) przyrostek='COLOR="black"';
+if(Check4.checked) przyrostek+=' SIZE=3';
+textarea8.value+=("<FONT "+przyrostek+">\n");}}
+function naglowek(x)
+{x++;
+var przyrostek="<H"+x+">\n\n</H"+x+">\n";
+with(document.Form9)
+{textarea8.value+=przyrostek;}}
+function rysunki()
+{with(document.Form9)
+{przyrostek="<IMG SRC='file:/"+Plik1.value+"'>\n";
+textarea8.value+=przyrostek;}}
+
+function testuj()
+{
+noweOkno=window.open()
+noweOkno.document.write("<A HREF='javascript:opener.focus(); self.close()'>ZAMKNIJ</A> Oto wygl±d twojej strony:<HR>");
+noweOkno.document.write(document.forms["Form9"].textarea8.value);
+noweOkno.focus();
+noweOkno.document.close(); }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<H1> Poniżej znajdziesz linki do stron oerujacych podstay wiedzy potzrebnej do utworzenia własnej strony internetowej</H1>
+ <HR SIZE="3">
+ <H1>Tu możesz wygenerować kod HTML i obejrzeć efekty twojej pracy. Miłej zabawy!!!</H1>
+<HR SIZE="3">
+
+<TABLE BGCOLOR="#545248" BORDER="1" WIDTH="100%" HEIGHT="7%">
+<TABLE>
+
+<TR>
+
+
+<TD VALIGN="top">
+
+<FORM NAME="Form9">
+<TEXTAREA NAME="textarea8" COLS="60" ROWS="20" VALUE="" 
+WRAP="SOFT"></TEXTAREA>
+<FONT COLOR="black"><B><FONT SIZE=-1>
+<BR>
+
+
+<table BORDER="0">
+<tr>
+<td  valign="top">
+
+<INPUT TYPE="BUTTON" VALUE="Podgl±d" STRONY" ONCLICK="TESTUJ();">
+</TD>
+<TD>
+<INPUT TYPE="BUTTON" VALUE="ZAZNACZ WSZYSTKO"
+ONCLICK="DOCUMENT.FORM9.TEXTAREA8.SELECT(); DOCUMENT.FORM9.TEXTAREA8.FOCUS()">
+</TD>
+</TR>
+
+
+<TR>
+<TD  VALIGN="TOP">
+<B>TABLICA</B><BR>
+<INPUT TYPE="BUTTON" NAME="BUTTON46" VALUE="<TABLE>"onClick="document.Form9.textarea8.value+='<TABLE>'">
+<INPUT TYPE="Button" NAME="Button46" VALUE="</TABLE>"onClick="document.Form9.textarea8.value+='</TABLE>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button47" VALUE="<TR>"onClick="document.Form9.textarea8.value+='<TR>'">
+<INPUT TYPE="Button" NAME="Button47" VALUE="</TR>"onClick="document.Form9.textarea8.value+='</TR>\n'">
+<INPUT TYPE="Button" NAME="Button48" VALUE="<TD>"onClick="document.Form9.textarea8.value+='<TD>'">
+<INPUT TYPE="Button" NAME="Button48" VALUE="</TD>"onClick="document.Form9.textarea8.value+='</TD>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button21" VALUE="<STRIKE> " ONCLICK="document.Form9.textarea8.value+='<STRIKE>\n'">
+<INPUT TYPE="Button" NAME="Button22" VALUE="</STRIKE> " ONCLICK="document.Form9.textarea8.value+='</STRIKE>\n'">
+<BR>
+</TD><TD VALIGN="top">
+<B>Formularze:</B><BR>
+
+
+
+<INPUT TYPE="Button" NAME="Button9" VALUE="<FORM>" ONCLICK="document.Form9.textarea8.value+='<FORM>\n'">
+<INPUT TYPE="Button" NAME="Button10" VALUE="</FORM>" ONCLICK="document.Form9.textarea8.value+='</FORM>\n'">
+<BR>
+<SELECT NAME="select13" ONBLUR="wypisz(this.selectedIndex)">
+<OPTION>Button</OPTION>&nbsp;
+<OPTION>Checkbox</OPTION>&nbsp;
+<OPTION>Select</OPTION>&nbsp;
+<OPTION>Text</OPTION>&nbsp;
+<OPTION>Textarea</OPTION>&nbsp;
+</SELECT>&nbsp;&nbsp;
+
+Name&nbsp;<INPUT TYPE="Checkbox" NAME="Check1">
+
+Value&nbsp;<INPUT TYPE="Checkbox" NAME="Check2">
+
+
+
+</TD></TR>
+</TABLE>
+<B>RYSUNKI:</B>
+<BR><INPUT TYPE="Button" NAME="Button14" VALUE="<IMG> "onClick="rysunki()">
+<INPUT TYPE="File" NAME="Plik1" VALUE="c:\">
+
+</TD>
+<TD ALIGN="Left" VALIGN="top">
+
+
+
+<INPUT TYPE="Button" NAME="Button1" VALUE="<HTML> "onClick="document.Form9.textarea8.value+='<HTML>\n'"><BR>
+
+<INPUT TYPE="Button" NAME="Button2" VALUE="<HEAD> "onClick="document.Form9.textarea8.value+='<HEAD>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button31" VALUE="<TITLE> "onClick="document.Form9.textarea8.value+='<TITLE>\n'">
+<INPUT TYPE="Button" NAME="Button32" VALUE="</TITLE> "onClick="document.Form9.textarea8.value+='</TITLE>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button6" VALUE="</HEAD>"onClick="document.Form9.textarea8.value+='</HEAD>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button3" VALUE="<BODY> "onClick="document.Form9.textarea8.value+='<BODY>\n'"><P>
+
+<INPUT TYPE="Button" NAME="Button23" VALUE="<CENTER> " ONCLICK="document.Form9.textarea8.value+='<CENTER>\n'">
+<INPUT TYPE="Button" NAME="Button24" VALUE="</CENTER> " ONCLICK="document.Form9.textarea8.value+='</CENTER>\n'"><BR>
+
+<B>NAGLÓWKI:</B><SELECT NAME="select13" ONBLUR="naglowek(this.selectedIndex)">
+&nbsp;<OPTION>H1</OPTION>
+&nbsp;<OPTION>H2</OPTION>
+&nbsp;<OPTION>H3</OPTION>
+&nbsp;<OPTION>H4</OPTION>
+&nbsp;<OPTION>H5</OPTION>
+&nbsp;<OPTION>H6</OPTION>
+&nbsp;</SELECT><P>
+
+<B>CZCIONKI:</B><BR>
+
+<INPUT TYPE="Button" NAME="Button12" VALUE="<FONT>  "onClick="fonty()">
+<INPUT TYPE="Button" NAME="Button13" VALUE="</FONT> "onClick="document.Form9.textarea8.value+='</FONT>\n'"><BR>
+Kolor&nbsp;<INPUT TYPE="Checkbox" NAME="Check3">Size&nbsp;
+<INPUT TYPE="Checkbox" NAME="Check4">&nbsp;&nbsp;&nbsp;&nbsp;<P>
+
+<INPUT TYPE="Button" NAME="Button15" VALUE="<B> " ONCLICK="document.Form9.textarea8.value+='<B>\n'">
+<INPUT TYPE="Button" NAME="Button16" VALUE="</B> " ONCLICK="document.Form9.textarea8.value+='</B>\n'">
+<INPUT TYPE="Button" NAME="Button17" VALUE="<I> " ONCLICK="document.Form9.textarea8.value+='<I>\n'">
+<INPUT TYPE="Button" NAME="Button18" VALUE="</I> " ONCLICK="document.Form9.textarea8.value+='</I>\n'">
+<INPUT TYPE="Button" NAME="Button19" VALUE="<U> " ONCLICK="document.Form9.textarea8.value+='<U>\n'">
+<INPUT TYPE="Button" NAME="Button20" VALUE="</U> " ONCLICK="document.Form9.textarea8.value+='</U>\n'">
+<BR>
+
+<INPUT TYPE="Button" NAME="Button20" VALUE="<p> " ONCLICK="document.Form9.textarea8.value+='<p>\n'">
+
+<INPUT TYPE="Button" NAME="Button20" VALUE="<hr> " ONCLICK="document.Form9.textarea8.value+='<hr>\n'">
+<INPUT TYPE="Button" NAME="Button20" VALUE="<br> " ONCLICK="document.Form9.textarea8.value+='<br>\n'">
+<P><B>ODNO¦NIKI</B><BR>
+<INPUT TYPE="Button" NAME="Button44" VALUE="<A Href=&quot &quot&gt"onClick="document.Form9.textarea8.value+='<A Href=&quot &quot&gt'">
+<INPUT TYPE="Button" NAME="Button45" VALUE="</A>"onClick="document.Form9.textarea8.value+='</A>\n'"><P>
+
+
+
+
+<INPUT TYPE="Button" NAME="Button7" VALUE="</BODY>"onClick="document.Form9.textarea8.value+='</BODY>\n'"><BR>
+<INPUT TYPE="Button" NAME="Button5" VALUE="</HTML>"onClick="document.Form9.textarea8.value+='</HTML>\n'"><P>
+
+
+
+
+</TD>
+</TR>
+
+
+<BR>
+</FORM>
+
+</TR>
+
+</TABLE>
+</TR>
+
+</TABLE>
+</CENTER>
+<BODY>
+</BODY>
+</HTML>
