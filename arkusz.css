@@ -158,3 +158,8 @@ footer {
         height: 350px; /* jeszcze mniejsza wysokość na telefonach */
     }
 }
+.ikona {
+  width: 24px;       /* Zmień na inną wartość, jeśli chcesz większą/mniejszą ikonę */
+  height: auto;
+  vertical-align: middle;
+  margin-right: 8px;
