@@ -1,38 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+/* --- Podstawowe style dla całej strony --- */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5fafa;
-  color: #2f4a4c;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: rgb(69,101,106);
 }
 
-.kontakt {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: #f5fafa;
-  border: 2px solid #2f4a4c;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 2rem auto;
+header {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.kontakt-logo {
-  max-width: 180px;
+header table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.kontakt-dane h2 {
-  margin: 0 0 0.5rem 0;
-  font-weight: 600;
-  font-size: 1.5rem;
+header td {
+    vertical-align: middle;
 }
 
-.kontakt-dane a {
-  color: #2f4a4c;
-  text-decoration: none;
+h1 {
+    font-weight: 500;
+    font-size: 2.6em;
+    color: rgb(69,101,106);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin: 0 0 8px 0;
 }
 
-.kontakt-dane a:hover {
-  text-decoration: underline;
+h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: rgb(69,101,106);
+    margin: 6px 0 14px 0;
+    border-radius: 3px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: rgb(69,101,106);
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+nav {
+    background-color: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    border: 2px solid rgb(69,101,106);
+    padding: 10px 18px;
+    margin: 0 12px;
+    border-radius: 14px;
+    color: rgb(69,101,106);
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 6px rgba(69,101,106, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover, nav a:focus {
+    background-color: rgb(69,101,106);
+    color: white;
+    box-shadow: 0 0 12px rgba(69,101,106, 0.7);
+}
+
+main {
+    padding: 15px 20px;
+}
+
+iframe[name="ramka"] {
+    width: 100%;
+    height: 600px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Stopka --- */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.9em;
+    color: rgb(69,101,106);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* === RESPONSYWNOŚĆ === */
+
+/* Tablet i mniejsze ekrany (do 768px) */
+@media (max-width: 768px) {
+    header table, header tr, header td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    header td {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+        padding: 10px 16px;
+        font-size: 1em;
+	 border-radius: 25px; /* mocniejsze zaokrąglenie */
+
+    }
+
+    iframe[name="ramka"] {
+        height: 450px; /* mniejsza wysokość na tabletach */
+    }
+}
+
+/* Telefony (do 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px auto;
+        padding: 12px 20px;
+        font-size: 1.1em;
+        max-width: 260px;
+        border-radius: 20px;
+    }
+
+    iframe[name="ramka"] {
+        height: 350px; /* jeszcze mniejsza wysokość na telefonach */
+    }
 }
