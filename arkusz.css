@@ -163,3 +163,10 @@ footer {
   height: auto;
   vertical-align: middle;
   margin-right: 8px;
+}
+.qr {
+  width: 150px;  /* lub inna wartość, np. 100px */
+  height: auto;  /* zachowuje proporcje */
+}
+
+	
