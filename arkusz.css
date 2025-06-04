@@ -159,7 +159,7 @@ footer {
     }
 }
 .ikona {
-  width: 24px;       /* Zmień na inną wartość, jeśli chcesz większą/mniejszą ikonę */
+  width: 36px;       /* Zmień na inną wartość, jeśli chcesz większą/mniejszą ikonę */
   height: auto;
   vertical-align: middle;
   margin-right: 8px;
