@@ -203,7 +203,7 @@ button {
     }
 
     body {
-        font-size: 14px; /* mniejszy bazowy tekst na tabletach */
+        font-size: 10px; /* mniejszy bazowy tekst na tabletach */
     }
 
     iframe[name="ramka"] {
@@ -235,7 +235,7 @@ button {
     }
 
     body {
-        font-size: 12px; /* minimalny rozmiar tekstu na telefonach */
+        font-size: 8px; /* minimalny rozmiar tekstu na telefonach */
     }
 
     iframe[name="ramka"] {
