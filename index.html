@@ -92,6 +92,16 @@ Muzyka wykorzystana na stronie pochodzi z darmowej biblioteki Pixabay —
   }
 </script>
 
+<script>
+  // Odtwarzanie dźwięku po pierwszej interakcji
+  function enableAudioOnce() {
+    const audio = document.getElementById('bgmusic');
+    audio.muted = false;
+    audio.play();
+    document.removeEventListener('click', enableAudioOnce); // tylko raz
+  }
 
+  document.addEventListener('click', enableAudioOnce);
+</script>
 </body>
 </html>
