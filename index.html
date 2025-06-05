@@ -12,13 +12,23 @@
 	
 	
 </head>
+
 <body>
+
+
 
     <header>
         <table>
             <tr>
                 <td>
-                    <img src="./grafika/Logo.png" width="180" alt="Logo Let's Draw Tech">
+                   
+<button onclick ="toggleMuteAudio()" id="logoBtn" style="background:none; border:none; padding:0; margin:0; outline:none; cursor:pointer;">
+  <img src="./grafika/Logo.png" width="180" alt="Logo Let's Draw Tech">
+</button>
+
+
+
+
                 </td>
                 <td>
                     <h1>Let's Draw Tech</h1>
@@ -41,13 +51,47 @@
     </nav>
 
     <main>
-        <iframe name="ramka" width="100%" height="600px" style="border: none;"></iframe>
+        <iframe  name="ramka" src="./kontakt.html" width="100%" height="600px" style="border: none;"></iframe>
     </main>
 
 <footer>
         <p>&copy; 2025 Let's Draw Tech. Wszelkie prawa zastrzeżone.<br />
-        Projekt i wykonanie: mgr inż. Stanisław Cagara.<br />
-        Kopiowanie, rozpowszechnianie i wykorzystywanie materiałów bez zgody autora jest zabronione.</p>
-    </footer>
+        Projekt i wykonanie: mgr inż. Stanisław Cagara.
+        Kopiowanie, rozpowszechnianie i wykorzystywanie materiałów bez zgody autora jest zabronione.<br>
+Muzyka wykorzystana na stronie pochodzi z darmowej biblioteki Pixabay — 
+    <a href="https://pixabay.com/music/corporate-ambient-music-165210/" target="_blank" rel="noopener noreferrer">
+      Corporate Ambient Music
+    </a>.
+  </p>    
+
+</footer>
+
+<audio id="bgmusic" autoplay muted loop>
+  <source src="./ambient-music-165210.mp3" type="audio/mpeg">
+  Twoja przeglądarka nie obsługuje elementu audio.
+</audio>
+
+<script>
+  function toggleMuteAudio() {
+    const audio = document.getElementById('bgmusic');
+    audio.muted = !audio.muted;
+
+    if (!audio.paused && !audio.muted) {
+      audio.play(); // jeśli dźwięk jest włączony, gra dalej
+    } else if (audio.paused) {
+      audio.play(); // jeśli było zatrzymane, gra od nowa
+    }
+  }
+</script>
+
+<script>
+  function unmuteAudio() {
+    const audio = document.getElementById('bgmusic');
+    audio.muted = false;
+    audio.play();
+  }
+</script>
+
+
 </body>
 </html>
