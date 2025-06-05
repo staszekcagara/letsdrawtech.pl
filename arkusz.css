@@ -167,6 +167,63 @@ footer {
 .qr {
   width: 150px;  /* lub inna wartość, np. 100px */
   height: auto;  /* zachowuje proporcje */
+  margin-top: 1rem;
+}
+.kontener-kolumny {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
-	
+.lewa-kolumna,
+.prawa-kolumna {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kontakt-element {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+.qr {
+  max-width: 200px;
+  height: auto;
+  margin-top: 1rem;
+}
+.kontakt-link {
+  color: #5d7075; /* spokojny, lekko zgaszony szaroniebieski */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.kontakt-link:hover {
+  color: #3b4c4f; /* lekko ciemniejszy przy najechaniu */
+  text-decoration: underline;
+}	
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+<style>
+#logoBtn img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#logoBtn:hover img {
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(0, 174, 255, 0.5));
+  transform: scale(1.05);
+}
+</style>
